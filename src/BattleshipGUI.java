@@ -22,7 +22,6 @@ public class BattleshipGUI extends JFrame {
         buildBoard();
         add(buildStatusPanel(), BorderLayout.SOUTH);
         updateStatus();
-        game.debugPrintShips();
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
@@ -125,7 +124,6 @@ public class BattleshipGUI extends JFrame {
             }
         }
         updateStatus();
-        game.debugPrintShips();
     }
     private void playAgain() {
         int choice = JOptionPane.showConfirmDialog(

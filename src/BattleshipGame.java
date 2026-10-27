@@ -44,16 +44,7 @@ public class BattleshipGame {
         Ship ship = board.getShipAt(row, col);
         return ship != null && ship.isSunk();
     }
-    public void debugPrintShips() {
-        for (int row = 0; row < Board.SIZE; row++) {
-            StringBuilder line = new StringBuilder();
-            for (int col = 0; col < Board.SIZE; col++) {
-                line.append(board.getShipAt(row, col) == null ? ". " : "S ");
-            }
-            System.out.println(line);
-        }
-        System.out.println();
-    }
+
     private void resetCounters() {
         missCount = 0;
         strikeCount = 0;
